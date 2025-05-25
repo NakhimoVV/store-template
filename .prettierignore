@@ -1,0 +1,9 @@
+.next/
+node_modules/
+
+*.md
+*.json
+*.yaml
+
+**/public/
+.DS_Store
