@@ -1,4 +1,6 @@
 body {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-light);
+  color: var(--color-black);
+
+  @include fluid-text(32, 16);
 }

@@ -1,4 +1,26 @@
 :root {
-  --color-black: #232222;
-  --color-white: #aba8a8;
+  --color-black: #121212;
+  --color-white: #ffffff;
+  --color-light: #f6f6f6;
+
+  --color-accent: #4dafd9;
+
+  --color-blue-1: #1b2c33;
+  --color-blue-2: #2196f3;
+  --color-blue-3: #84b6cb;
+  --color-blue-4: #1f607b;
+
+  --border: 1px solid var(--color-light);
+
+  --border-radius-s: 10px;
+  --border-radius-m: 15px;
+  --border-radius-l: 20px;
+
+  --font-family-base: 'Montserrat', sans-serif;
+  --font-family-accent: 'Inter', sans-serif;
+
+  --container-width: #{fluid-to-laptop($container-desktop-width,$container-laptop-width)};
+  --container-padding-x: 16px;
+
+  --transition-duration: 0.2s;
 }

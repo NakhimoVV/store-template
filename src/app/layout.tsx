@@ -1,4 +1,5 @@
-import '@/shared/styles'
+import { Inter, Montserrat } from 'next/font/google'
+import 'shared/styles'
 import Header from '@widgets/Header'
 
 export default function RootLayout({

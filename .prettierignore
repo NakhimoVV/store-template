@@ -4,6 +4,6 @@ node_modules/
 *.md
 *.json
 *.yaml
-
+.idea/
 **/public/
 .DS_Store
