@@ -1,0 +1,8 @@
+.logo {
+  width: fluid(150, 130);
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+  }
+}

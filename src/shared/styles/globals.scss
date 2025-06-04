@@ -1,6 +1,90 @@
-body {
-  background-color: var(--color-light);
-  color: var(--color-black);
-
-  @include fluid-text(32, 16);
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  font-size: 15px;
+  color: var(--color-black);
+  background-color: var(--color-light);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, .h1 {
+  @include fluid-text(64, 20);
+
+  font-weight: 700;
+}
+
+h2, .h2 {
+  @include fluid-text(35, 19);
+
+  font-weight: 700;
+}
+
+h3, .h3 {
+  @include fluid-text(25, 18);
+
+  font-weight: 600;
+}
+
+h4, .h4 {
+  @include fluid-text(20, 18);
+
+  font-weight: 500;
+}
+
+h5, .h5 {
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+h6, .h6 {
+  font-size: 16px;
+
+  font-weight: 500;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  @include focus-visible;
+}
+
+//:has(.swiper) {
+//  min-width: 0; // Фикс бага с увеличением ширины в свайпере
+//}
+
+// .header,
+// .content > *:not(:nth-last-child(2)),
+// .footer {
+//   // display: none !important;
+// }

@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
       '@shared': path.resolve(__dirname, 'src/shared'),
       '@widgets': path.resolve(__dirname, 'src/widgets'),
     }
+
     return config
   },
 }

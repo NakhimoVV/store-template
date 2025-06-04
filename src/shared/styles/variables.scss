@@ -1,5 +1,6 @@
 :root {
   --color-black: #121212;
+  --color-grey: #464646;
   --color-white: #ffffff;
   --color-light: #f6f6f6;
 
@@ -15,6 +16,8 @@
   --border-radius-s: 10px;
   --border-radius-m: 15px;
   --border-radius-l: 20px;
+
+  --shadow: 0 0 20px 0 #00000026;
 
   --font-family-base: 'Montserrat', sans-serif;
   --font-family-accent: 'Inter', sans-serif;

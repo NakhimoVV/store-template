@@ -1,4 +1,39 @@
 .header {
-  border: 1px solid firebrick;
-  border-radius: 50px;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  font-family: var(--font-family-accent);
+  font-weight: 300;
+  padding-block: fluid(16, 13);
+  background-color: inherit;
+  box-shadow: var(--shadow);
+
+  &__inner {
+    display: grid;
+    row-gap: 15px;
+  }
+
+  &__top,
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__top {
+    text-align: center;
+  }
+
+  &__contact-links {
+    font-weight: 400;
+  }
+
+  &__bottom-left,
+  &__bottom-right {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 25px;
+  }
 }

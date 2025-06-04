@@ -1,0 +1,10 @@
+.navigation-menu {
+  color: var(--color-grey);
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: fluid(15, 8);
+    flex-wrap: wrap;
+  }
+}
