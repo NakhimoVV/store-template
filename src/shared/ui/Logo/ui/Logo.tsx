@@ -1,16 +1,14 @@
 import './Logo.scss'
 import classNames from 'classnames'
 import Link from 'next/link'
-import logoImgSrc from '@shared/assets/images/logo.svg'
-import Image from 'next/image'
+import LogoIcon from '@shared/assets/images/logo.svg'
 
 type LogoProps = {
   className?: string
-  priority?: boolean
 }
 
 const Logo = (props: LogoProps) => {
-  const { className, priority = false } = props
+  const { className } = props
   const title = 'Главная страница'
 
   return (
@@ -20,12 +18,7 @@ const Logo = (props: LogoProps) => {
       title={title}
       aria-label={title}
     >
-      <Image
-        className="logo__image"
-        src={logoImgSrc}
-        alt=""
-        priority={priority}
-      />
+      <LogoIcon className="logo-icon" />
     </Link>
   )
 }

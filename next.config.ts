@@ -16,6 +16,25 @@ const nextConfig: NextConfig = {
       '@widgets': path.resolve(__dirname, 'src/widgets'),
     }
 
+    config.module.rules.push({
+      test: /\.svg$/,
+      include: path.resolve(__dirname, 'src/shared/assets/icons'),
+      use: [
+        {
+          loader: 'svg-sprite-loader',
+          options: {
+            symbolId: '[name]',
+          },
+        },
+      ],
+    })
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      exclude: path.resolve(__dirname, 'src/shared/assets/icons'),
+      use: [{ loader: '@svgr/webpack' }],
+    })
+
     return config
   },
 }

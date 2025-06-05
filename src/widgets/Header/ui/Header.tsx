@@ -3,6 +3,7 @@ import Logo from '@shared/ui/Logo'
 import { Contact, NavigationMenuItem } from '@shared/types'
 import ContactLinks from '@shared/ui/ContactLinks'
 import NavigationMenu from '@shared/ui/NavigationMenu'
+import Button from '@shared/ui/Button'
 
 const contactLinks: Contact[] = [
   {
@@ -41,17 +42,28 @@ const Header = () => {
         </div>
         <div className="header__bottom">
           <div className="header__bottom-left">
-            <Logo className="header__logo" priority />
-            <button className="header__button-catalog" type="button">
-              Каталог
-            </button>
+            <Logo className="header__logo" />
+            <Button
+              className="header__button-catalog"
+              type="button"
+              label="Каталог"
+              iconName="cart"
+              iconPosition="before"
+            />
           </div>
           <div className="header__bottom-right">
             <form className="header__search search-form">
               <input type="text" id="" name="" />
               <button type="submit">иконка поиска</button>
             </form>
-            Иконки ЛОГИН ИЗБРАННОЕ КОРЗИНА
+            ЛОГИН ИЗБРАННОЕ
+            <Button
+              className="header__button-cart"
+              href="/cart"
+              label="Корзина товаров"
+              isLabelHidden
+              iconName="cart"
+            />
           </div>
         </div>
       </div>
