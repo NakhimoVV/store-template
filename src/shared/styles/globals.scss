@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-base);
-  font-size: 15px;
+  font-size: 16px;
   color: var(--color-black);
   background-color: var(--color-light);
 }
@@ -72,6 +72,20 @@ a {
 
   &[class] {
     text-decoration: none;
+  }
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(44px);
+
+      content: '';
+    }
   }
 }
 

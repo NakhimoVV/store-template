@@ -2,7 +2,7 @@
   @include flex-center(true);
 
   column-gap: fluid(10, 4);
-  padding: 10px 15px;
+  padding: 6px 15px;
   font-family: var(--font-family-accent);
   font-weight: 500;
   text-align: center;
@@ -14,7 +14,7 @@
   cursor: pointer;
 
   @include hover {
-    color: var(-color-light);
+    color: var(--color-light);
     background-color: var(--color-blue-2);
   }
 
@@ -24,7 +24,29 @@
 
   @include disabled;
 
-  //  &:has(.button__icon:only-child) {
-  //    padding: 0;
-  //  }
+
+  &--circle {
+    @include square(36px);
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  &--right-round {
+    padding-left: 10px;
+    border-radius: 0 var(--border-radius-s) var(--border-radius-s) 0;
+  }
+
+  &--anchor {
+    color: var(--color-blue-4);
+    padding: 0;
+    text-decoration: underline;
+    text-underline-position: under;
+    border-radius: 0;
+    background: none;
+
+    @include hover {
+      color: var(--color-black);
+      background: none;
+    }
+  }
 }

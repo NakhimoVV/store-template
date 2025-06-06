@@ -1,0 +1,20 @@
+.field {
+  display: flex;
+
+  &__required-star {
+    color: var(--color-red);
+  }
+
+  &__body {
+    display: flex;
+    width: 100%;
+
+    &:has(input[id='search']) {
+      height: 36px;
+    }
+  }
+
+  &__control {
+    width: 100%;
+  }
+}

@@ -7,6 +7,7 @@ type ButtonProps = {
   className?: string
   href?: string
   type?: 'submit' | 'button' | 'reset'
+  mode?: 'circle' | 'right-round' | 'anchor'
   label?: string
   isLabelHidden?: boolean
   iconName?: string
@@ -18,6 +19,7 @@ const Button = (props: ButtonProps) => {
     className,
     href,
     type = 'button',
+    mode = '',
     label,
     isLabelHidden = false,
     iconName,
@@ -31,7 +33,9 @@ const Button = (props: ButtonProps) => {
   )
 
   const commonAttrs = {
-    className: classNames(className, 'button'),
+    className: classNames(className, 'button', {
+      [`button--${mode}`]: mode,
+    }),
     title,
     'aria-label': title,
   }

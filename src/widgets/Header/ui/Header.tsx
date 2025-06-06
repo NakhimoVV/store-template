@@ -4,6 +4,7 @@ import { Contact, NavigationMenuItem } from '@shared/types'
 import ContactLinks from '@shared/ui/ContactLinks'
 import NavigationMenu from '@shared/ui/NavigationMenu'
 import Button from '@shared/ui/Button'
+import SearchForm from '@/features/SearchForm'
 
 const contactLinks: Contact[] = [
   {
@@ -20,7 +21,6 @@ const menuItems: NavigationMenuItem[] = [
   { href: '/promo', label: 'Акции' },
   { href: '/stores', label: 'Магазины' },
   { href: '/about', label: 'О компании' },
-  { href: '/delivery-payment', label: 'Доставка и оплата' },
   { href: '/returns-exchanges', label: 'Возврат и обмен товаров' },
   { href: '/wholesale', label: 'Оптовикам' },
 ]
@@ -38,7 +38,7 @@ const Header = () => {
             className="header__top-navigation"
             items={menuItems}
           />
-          Заказать консультацию
+          <Button type="button" mode="anchor" label="Заказать консультацию" />
         </div>
         <div className="header__bottom">
           <div className="header__bottom-left">
@@ -47,19 +47,32 @@ const Header = () => {
               className="header__button-catalog"
               type="button"
               label="Каталог"
-              iconName="cart"
+              iconName="catalog"
               iconPosition="before"
             />
           </div>
+          <SearchForm className="header____bottom-middle" />
           <div className="header__bottom-right">
-            <form className="header__search search-form">
-              <input type="text" id="" name="" />
-              <button type="submit">иконка поиска</button>
-            </form>
-            ЛОГИН ИЗБРАННОЕ
             <Button
               className="header__button-cart"
               href="/cart"
+              mode="circle"
+              label="Войти"
+              isLabelHidden
+              iconName="user"
+            />
+            <Button
+              className="header__button-cart"
+              href="/cart"
+              mode="circle"
+              label="Избранное"
+              isLabelHidden
+              iconName="favorite"
+            />
+            <Button
+              className="header__button-cart"
+              href="/cart"
+              mode="circle"
               label="Корзина товаров"
               isLabelHidden
               iconName="cart"
