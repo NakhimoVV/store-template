@@ -1,8 +1,8 @@
 import './Icon.scss'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 type IconProps = {
-  className: string
+  className?: string
   name: string
   hasFill?: boolean
   ariaLabel?: string
@@ -12,7 +12,7 @@ const Icon = (props: IconProps) => {
   const { className, name, hasFill = false, ariaLabel } = props
 
   return (
-    <span className={classNames(className, 'icon')} aria-label={ariaLabel}>
+    <span className={clsx(className, 'icon')} aria-label={ariaLabel}>
       <svg
         fill={hasFill ? 'currentColor' : 'none'}
         stroke={hasFill ? 'none' : 'currentColor'}

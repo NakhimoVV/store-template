@@ -1,7 +1,7 @@
 import './NavigationMenu.scss'
+import clsx from 'clsx'
 import Link from 'next/link'
 import { NavigationMenuItem } from '@shared/types'
-import classNames from 'classnames'
 
 type NavigationMenuProps = {
   className?: string
@@ -12,7 +12,7 @@ const NavigationMenu = (props: NavigationMenuProps) => {
   const { className, items } = props
 
   return (
-    <nav className={classNames(className, 'navigation-menu')}>
+    <nav className={clsx(className, 'navigation-menu')}>
       <ul className="navigation-menu__list">
         {items.map((item) => (
           <li className="navigation-menu__item" key={item.href}>

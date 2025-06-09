@@ -1,5 +1,5 @@
 import './Field.scss'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import getIdFromTitle from '@shared/ui/Field/lib/getIdFromTitle'
 import { InputHTMLAttributes } from 'react'
 
@@ -31,9 +31,9 @@ const Field = (props: FieldProps) => {
   // TODO: продумать универсальность и корректность атрибутов
 
   return (
-    <div className={classNames(className, 'field')}>
+    <div className={clsx(className, 'field')}>
       <label
-        className={classNames('field__label', {
+        className={clsx('field__label', {
           'visually-hidden': isLabelHidden,
         })}
         htmlFor={id}

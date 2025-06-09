@@ -1,0 +1,33 @@
+.grid {
+  --gridColumns: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
+  gap: fluid-to-laptop(20, 10);
+
+  &__item {
+    &--wide {
+      grid-column: -1 / 1;
+    }
+
+    &--wide-2 {
+      grid-column: span 2;
+    }
+  }
+
+  &--2 {
+    --gridColumns: 2;
+  }
+
+  &--3 {
+    --gridColumns: 3;
+  }
+
+  &--4 {
+    --gridColumns: 4;
+  }
+
+  &--5 {
+    --gridColumns: 5;
+  }
+}

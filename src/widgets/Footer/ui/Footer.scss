@@ -1,0 +1,9 @@
+.footer {
+  padding-block: 30px;
+  color: var(--color-white);
+  background-color: var(--color-blue-1);
+
+  &__column {
+    align-self: center;
+  }
+}

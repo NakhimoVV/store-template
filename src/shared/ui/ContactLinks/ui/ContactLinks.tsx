@@ -1,6 +1,7 @@
 import './ContactLinks.scss'
+import clsx from 'clsx'
 import { Contact } from '@shared/types'
-import classNames from 'classnames'
+import Icon from '@shared/ui/Icon'
 
 type ContactLinksProps = {
   className: string
@@ -9,16 +10,30 @@ type ContactLinksProps = {
 
 const ContactLinks = (props: ContactLinksProps) => {
   const { className, links } = props
+  const isFooterLocation = className === 'footer__contact-links'
 
   return (
-    <div className={classNames(className, 'contact-links')}>
-      <ul className="contact-links__list">
+    <div className={clsx(className, 'contact-links')}>
+      <ul
+        className={clsx('contact-links__list', {
+          'contact-links__list--column': isFooterLocation,
+        })}
+      >
         {links.map((link) => {
           const isPhone = link.type === 'phone'
           const href = isPhone ? `tel:${link.value}` : `mailto:${link.value}`
+          const iconName = isFooterLocation
+            ? isPhone
+              ? 'phone-for-footer'
+              : 'mail-for-footer'
+            : isPhone
+              ? 'phone'
+              : 'mail'
+
           return (
             <li className="contact-links__item" key={link.value}>
               <a className="contact-links__link" href={href}>
+                <Icon className="contact-links__icon" name={iconName} hasFill />
                 {link.label || link.value}
               </a>
             </li>

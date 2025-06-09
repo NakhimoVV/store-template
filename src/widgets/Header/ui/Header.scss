@@ -24,6 +24,10 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
+
+    &-button {
+      color: var(--color-blue-4);
+    }
   }
 
   &__bottom {

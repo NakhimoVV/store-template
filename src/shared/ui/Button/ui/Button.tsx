@@ -1,13 +1,14 @@
 import './Button.scss'
+import clsx from 'clsx'
 import Link from 'next/link'
-import classNames from 'classnames'
 import Icon from '@shared/ui/Icon'
+import { ButtonMode } from '@shared/ui/Button/lib/constants'
 
 type ButtonProps = {
   className?: string
   href?: string
   type?: 'submit' | 'button' | 'reset'
-  mode?: 'circle' | 'right-round' | 'anchor'
+  mode?: ButtonMode
   label?: string
   isLabelHidden?: boolean
   iconName?: string
@@ -33,7 +34,7 @@ const Button = (props: ButtonProps) => {
   )
 
   const commonAttrs = {
-    className: classNames(className, 'button', {
+    className: clsx(className, 'button', {
       [`button--${mode}`]: mode,
     }),
     title,

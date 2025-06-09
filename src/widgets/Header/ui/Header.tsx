@@ -5,6 +5,7 @@ import ContactLinks from '@shared/ui/ContactLinks'
 import NavigationMenu from '@shared/ui/NavigationMenu'
 import Button from '@shared/ui/Button'
 import SearchForm from '@/features/SearchForm'
+import { ButtonMode } from '@shared/ui/Button/lib/constants'
 
 const contactLinks: Contact[] = [
   {
@@ -38,7 +39,12 @@ const Header = () => {
             className="header__top-navigation"
             items={menuItems}
           />
-          <Button type="button" mode="anchor" label="Заказать консультацию" />
+          <Button
+            className="header__top-button"
+            href="/consult"
+            label="Заказать консультацию"
+            mode={ButtonMode.ANCHOR}
+          />
         </div>
         <div className="header__bottom">
           <div className="header__bottom-left">
@@ -56,7 +62,7 @@ const Header = () => {
             <Button
               className="header__button-cart"
               href="/cart"
-              mode="circle"
+              mode={ButtonMode.CIRCLE}
               label="Войти"
               isLabelHidden
               iconName="user"
@@ -64,7 +70,7 @@ const Header = () => {
             <Button
               className="header__button-cart"
               href="/cart"
-              mode="circle"
+              mode={ButtonMode.CIRCLE}
               label="Избранное"
               isLabelHidden
               iconName="favorite"
@@ -72,7 +78,7 @@ const Header = () => {
             <Button
               className="header__button-cart"
               href="/cart"
-              mode="circle"
+              mode={ButtonMode.CIRCLE}
               label="Корзина товаров"
               isLabelHidden
               iconName="cart"

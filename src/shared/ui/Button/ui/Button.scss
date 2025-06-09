@@ -2,28 +2,14 @@
   @include flex-center(true);
 
   column-gap: fluid(10, 4);
-  padding: 6px 15px;
   font-family: var(--font-family-accent);
   font-weight: 500;
   text-align: center;
-  color: var(--color-white);
-  background-color: var(--color-accent);
   border: none;
   border-radius: var(--border-radius-s);
   user-select: none;
   cursor: pointer;
-
-  @include hover {
-    color: var(--color-light);
-    background-color: var(--color-blue-2);
-  }
-
-  &:active {
-    scale: 1.05;
-  }
-
-  @include disabled;
-
+  white-space: nowrap;
 
   &--circle {
     @include square(36px);
@@ -37,16 +23,24 @@
   }
 
   &--anchor {
-    color: var(--color-blue-4);
-    padding: 0;
-    text-decoration: underline;
-    text-underline-position: under;
+    border-bottom: 1px solid currentColor;
     border-radius: 0;
-    background: none;
+  }
+
+  &:not(.button--anchor) {
+    color: var(--color-white);
+    padding: 6px 15px;
+    background-color: var(--color-accent);
 
     @include hover {
-      color: var(--color-black);
-      background: none;
+      color: var(--color-light);
+      background-color: var(--color-blue-2);
     }
   }
+
+  &:active {
+    scale: 1.05;
+  }
+
+  @include disabled;
 }

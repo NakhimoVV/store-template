@@ -1,7 +1,8 @@
 import './SearchForm.scss'
+import clsx from 'clsx'
 import Field from '@shared/ui/Field'
 import Button from '@shared/ui/Button'
-import classNames from 'classnames'
+import { ButtonMode } from '@shared/ui/Button/lib/constants'
 
 type SearchFormProps = {
   className?: string
@@ -11,7 +12,7 @@ const SearchForm = (props: SearchFormProps) => {
   const { className } = props
 
   return (
-    <form className={classNames(className, 'search-form')}>
+    <form className={clsx(className, 'search-form')}>
       <Field
         className="search-form__field"
         type="search"
@@ -26,7 +27,7 @@ const SearchForm = (props: SearchFormProps) => {
         label="Поиск товара"
         isLabelHidden
         iconName="search"
-        mode="right-round"
+        mode={ButtonMode.RIGHT_ROUND}
       />
     </form>
   )

@@ -1,6 +1,7 @@
 import 'shared/styles'
 import '@/shared/config/icons'
 import Header from '@widgets/Header'
+import Footer from '@widgets/Footer'
 
 export default function RootLayout({
   children,
@@ -12,6 +13,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
