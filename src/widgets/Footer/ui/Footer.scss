@@ -1,9 +1,32 @@
 .footer {
-  padding-block: 30px;
+  padding-block: fluid-to-laptop(30, 16);
+  font-family: var(--font-family-accent);
   color: var(--color-white);
   background-color: var(--color-blue-1);
 
   &__column {
     align-self: center;
+  }
+
+  &__policy-button {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-light);
+  }
+
+  &__navigation .navigation-menu__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: fluid-to-laptop(16, 6);
+    column-gap: 5px;
+
+    .navigation-menu__item:nth-child(2n+2) {
+      font-weight: 300;
+      color: var(--color-light);
+    }
+  }
+
+  @include tablet {
+    // TODO: Меняем сетку и возможно все-же стоит сделать свою сетку футеру
   }
 }

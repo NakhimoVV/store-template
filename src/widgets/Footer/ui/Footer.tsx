@@ -19,11 +19,13 @@ const contactLinks: Contact[] = [
   },
 ]
 const menuItems: NavigationMenuItem[] = [
+  { href: '/catalog', label: 'Каталог' },
   { href: '/promo', label: 'Акции' },
   { href: '/stores', label: 'Магазины' },
-  { href: '/about', label: 'О компании' },
-  { href: '/returns-exchanges', label: 'Возврат и обмен товаров' },
+  { href: '/delivery', label: 'Доставка и оплата' },
+  { href: '/contacts', label: 'Контакты' },
   { href: '/wholesale', label: 'Оптовикам' },
+  { href: '/returns-exchanges', label: 'Возврат и обмен товаров' },
 ]
 
 const Footer = () => {
@@ -39,8 +41,8 @@ const Footer = () => {
           <>
             <Logo className="footer__logo" />
             <Button
-              className="footer__sub-button"
-              href="/politics"
+              className="footer__policy-button"
+              href="/policy"
               label="Политика конфиденциальности"
               mode={ButtonMode.ANCHOR}
             />
@@ -49,10 +51,7 @@ const Footer = () => {
             className="footer__contact-links"
             links={contactLinks}
           />
-          <NavigationMenu
-            className="footer__top-navigation"
-            items={menuItems}
-          />
+          <NavigationMenu className="footer__navigation" items={menuItems} />
           <>
             <Button
               href="/consult"

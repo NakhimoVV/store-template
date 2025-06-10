@@ -86,13 +86,3 @@ button {
 :focus-visible {
   @include focus-visible;
 }
-
-//:has(.swiper) {
-//  min-width: 0; // Фикс бага с увеличением ширины в свайпере
-//}
-
-// .header,
-// .content > *:not(:nth-last-child(2)),
-// .footer {
-//   // display: none !important;
-// }

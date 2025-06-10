@@ -67,7 +67,7 @@
 }
 
 @mixin focus-visible {
-  outline: 2px dashed var(--color-blue-1);
+  outline: 2px dashed var(--color-accent);
   outline-offset: 4px;
   transition-duration: 0s !important;
 }

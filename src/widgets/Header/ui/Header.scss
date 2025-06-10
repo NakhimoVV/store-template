@@ -25,6 +25,10 @@
     align-items: center;
     text-align: center;
 
+    &-navigation {
+      color: var(--color-grey);
+    }
+
     &-button {
       color: var(--color-blue-4);
     }
@@ -46,5 +50,9 @@
     display: inline-flex;
     align-items: center;
     column-gap: 25px;
+  }
+
+  @include tablet {
+    // TODO: Добавляем бургер кнопку
   }
 }
