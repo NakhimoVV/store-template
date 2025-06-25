@@ -1,11 +1,11 @@
 import './Header.scss'
-import Logo from '@shared/ui/Logo'
-import { Contact, NavigationMenuItem } from '@shared/types'
-import ContactLinks from '@shared/ui/ContactLinks'
-import NavigationMenu from '@shared/ui/NavigationMenu'
-import Button from '@shared/ui/Button'
 import SearchForm from '@/features/SearchForm'
+import Button from '@shared/ui/Button'
 import { ButtonMode } from '@shared/ui/Button/lib/constants'
+import ContactLinks from '@shared/ui/ContactLinks'
+import Logo from '@shared/ui/Logo'
+import NavigationMenu from '@shared/ui/NavigationMenu'
+import type { Contact, NavigationMenuItem } from '@shared/types'
 
 const contactLinks: Contact[] = [
   {

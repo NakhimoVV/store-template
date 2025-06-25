@@ -1,6 +1,6 @@
 import './ContactLinks.scss'
+import type { Contact } from '@shared/types'
 import clsx from 'clsx'
-import { Contact } from '@shared/types'
 import Icon from '@shared/ui/Icon'
 
 type ContactLinksProps = {

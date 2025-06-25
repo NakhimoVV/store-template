@@ -1,6 +1,6 @@
 import './Footer.scss'
+import type { Contact, NavigationMenuItem } from '@shared/types'
 import Grid from '@shared/ui/Grid'
-import { Contact, NavigationMenuItem } from '@shared/types'
 import Logo from '@shared/ui/Logo'
 import Button from '@shared/ui/Button'
 import { ButtonMode } from '@shared/ui/Button/lib/constants'

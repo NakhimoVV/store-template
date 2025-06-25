@@ -1,5 +1,5 @@
-import type { NextConfig } from 'next'
 import path from 'path'
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   /* config options here - Здесь можно будет включать SSR, ISR, basePath и т.п. */
@@ -14,6 +14,8 @@ const nextConfig: NextConfig = {
       '@app': path.resolve(__dirname, 'src/app'),
       '@shared': path.resolve(__dirname, 'src/shared'),
       '@widgets': path.resolve(__dirname, 'src/widgets'),
+      '@features': path.resolve(__dirname, 'src/features'),
+      '@entities': path.resolve(__dirname, 'src/entities'),
     }
 
     config.module.rules.push({

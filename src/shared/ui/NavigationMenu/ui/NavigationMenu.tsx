@@ -1,7 +1,7 @@
 import './NavigationMenu.scss'
+import type { NavigationMenuItem } from '@shared/types'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { NavigationMenuItem } from '@shared/types'
 
 type NavigationMenuProps = {
   className?: string
