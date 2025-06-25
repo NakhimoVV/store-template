@@ -5,6 +5,11 @@ body {
   font-size: 16px;
   color: var(--color-black);
   background-color: var(--color-light);
+  // TODO: раскомментировать в конце разработки
+  //  @media (prefers-color-scheme: dark) {
+  //    background-color: var(--color-black);
+  //    color: var(--color-light);
+  //  }
 }
 
 main {
@@ -46,6 +51,15 @@ h6, .h6 {
 
   font-weight: 500;
 }
+
+/* TODO: раскомментировать в конце разработки
+input {
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-light);
+    background-color: var(--color-blue-1);
+  }
+}
+*/
 
 a,
 button,

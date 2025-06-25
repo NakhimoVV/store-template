@@ -1,7 +1,7 @@
 import './Field.scss'
 import clsx from 'clsx'
 import getIdFromTitle from '@shared/ui/Field/lib/getIdFromTitle'
-import { InputHTMLAttributes } from 'react'
+import type { InputHTMLAttributes } from 'react'
 
 type FieldProps = {
   className?: string

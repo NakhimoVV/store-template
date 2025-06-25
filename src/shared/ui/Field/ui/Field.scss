@@ -16,5 +16,9 @@
 
   &__control {
     width: 100%;
+    padding: 10px;
+    border: var(--border);
+    border-top-left-radius: var(--border-radius-s);
+    border-bottom-left-radius: var(--border-radius-s);
   }
 }

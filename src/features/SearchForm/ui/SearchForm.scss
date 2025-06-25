@@ -1,9 +1,16 @@
 .search-form {
   display: flex;
   align-items: center;
+  width: 280px;
+  transition-duration: var(--transition-duration);
+
+  &:has(.search-form__field input:focus-visible) {
+    width: 100%;
+  }
 
   &__field {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 }

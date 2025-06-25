@@ -27,6 +27,10 @@
 
     &-navigation {
       color: var(--color-grey);
+      // TODO: раскомментировать в конце разработки
+      //      @media (prefers-color-scheme: dark) {
+      //        color: var(--color-light);
+      //      }
     }
 
     &-button {
