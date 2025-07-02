@@ -1,10 +1,14 @@
+'use client'
+
 import './Header.scss'
 import SearchForm from '@/features/SearchForm'
+import { useFindHeightElement } from '@shared/hooks/useFindHeightElement'
 import Button from '@shared/ui/Button'
 import { ButtonMode } from '@shared/ui/Button/lib/constants'
 import ContactLinks from '@shared/ui/ContactLinks'
 import Logo from '@shared/ui/Logo'
 import NavigationMenu from '@shared/ui/NavigationMenu'
+import CatalogDropdown from '@widgets/CatalogDropdown'
 import type { Contact, NavigationMenuItem } from '@shared/types'
 
 const contactLinks: Contact[] = [
@@ -27,8 +31,10 @@ const menuItems: NavigationMenuItem[] = [
 ]
 
 const Header = () => {
+  const elementRef = useFindHeightElement('header')
+
   return (
-    <header className="header">
+    <header className="header" ref={elementRef}>
       <div className="header__inner container">
         <div className="header__top">
           <ContactLinks
@@ -49,13 +55,7 @@ const Header = () => {
         <div className="header__bottom">
           <div className="header__bottom-left">
             <Logo className="header__logo" />
-            <Button
-              className="header__button-catalog"
-              type="button"
-              label="Каталог"
-              iconName="catalog"
-              iconPosition="before"
-            />
+            <CatalogDropdown />
           </div>
           <SearchForm className="header____bottom-middle" />
           <div className="header__bottom-right">

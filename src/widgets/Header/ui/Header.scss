@@ -1,11 +1,10 @@
 .header {
   position: sticky;
-  z-index: 100;
   top: 0;
   width: 100%;
+  padding-block: fluid(16, 13);
   font-family: var(--font-family-accent);
   font-weight: 300;
-  padding-block: fluid(16, 13);
   background-color: inherit;
   box-shadow: var(--shadow);
 

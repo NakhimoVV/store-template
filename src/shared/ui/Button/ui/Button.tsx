@@ -2,7 +2,7 @@ import './Button.scss'
 import clsx from 'clsx'
 import Link from 'next/link'
 import Icon from '@shared/ui/Icon'
-import { ButtonMode } from '@shared/ui/Button/lib/constants'
+import type { ButtonMode } from '@shared/ui/Button/lib/constants'
 
 type ButtonProps = {
   className?: string
@@ -13,6 +13,7 @@ type ButtonProps = {
   isLabelHidden?: boolean
   iconName?: string
   iconPosition?: 'before' | 'after'
+  onClick?: () => void
 }
 
 const Button = (props: ButtonProps) => {
@@ -25,6 +26,7 @@ const Button = (props: ButtonProps) => {
     isLabelHidden = false,
     iconName,
     iconPosition = 'before',
+    onClick,
   } = props
 
   const isLink = href !== undefined
@@ -58,7 +60,7 @@ const Button = (props: ButtonProps) => {
   }
 
   return (
-    <button type={type} {...commonAttrs}>
+    <button type={type} {...commonAttrs} onClick={onClick}>
       {content}
     </button>
   )

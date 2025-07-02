@@ -21,6 +21,7 @@ export default function Home() {
   return (
     <main>
       <div className="container">
+        <h1 className="visually-hidden">Продажа материалов</h1>
         {categories.map((category) => (
           <CategoryCard category={category} key={category.id} />
         ))}
