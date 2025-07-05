@@ -53,6 +53,10 @@
     border-radius: var(--border-radius-m);
 
     box-shadow: 0 0 25px 16px var(--color-shadow-blue);
+
+    &.is-active {
+      border-color: var(--color-accent);
+    }
   }
 }
 
