@@ -1,0 +1,14 @@
+.subcategories {
+  padding: 20px;
+  border: var(--border-accent);
+  border-radius: var(--border-radius-m);
+
+  &__title {
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 16px;
+  }
+}

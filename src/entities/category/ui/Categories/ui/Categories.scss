@@ -1,0 +1,24 @@
+.categories {
+  &__title {
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  &__item {
+    padding-block: 14px;
+    padding-inline: 10px;
+    background-color: var(--color-light);
+    border: var(--border);
+    border-radius: var(--border-radius-m);
+
+    box-shadow: 0 0 25px 16px var(--color-shadow-blue);
+
+    &.is-active {
+      border-color: var(--color-accent);
+    }
+  }
+}
