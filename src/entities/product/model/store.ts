@@ -3,12 +3,15 @@ import type { Product } from '@/entities/product/model/types'
 
 type ProductStore = {
   products: Product[]
+  filteredProducts: Product[]
   isLoading: boolean
   fetchProducts: () => Promise<void>
+  setFilteredProducts: (categoryId: string) => void
 }
 
-export const useProductStore = create<ProductStore>((set) => ({
+export const useProductStore = create<ProductStore>((set, get) => ({
   products: [],
+  filteredProducts: [],
   isLoading: false,
 
   fetchProducts: async () => {
@@ -23,5 +26,12 @@ export const useProductStore = create<ProductStore>((set) => ({
     } finally {
       set({ isLoading: false })
     }
+  },
+
+  setFilteredProducts: (categoryId) => {
+    const filtered = get().products.filter(
+      (product: Product) => product.categoryId === categoryId,
+    )
+    set({ filteredProducts: filtered })
   },
 }))

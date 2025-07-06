@@ -11,9 +11,9 @@ const Subcategories = (props: SubcategoriesProps) => {
 
   return (
     <section className="subcategories" aria-labelledby="subcategories-title">
-      <h3 className="subcategories__title h4" id="subcategories-title">
+      <header className="subcategories__title h4" id="subcategories-title">
         {title}
-      </h3>
+      </header>
       <ul className="subcategories__list">
         {subcategories?.map((sub) => (
           <li className="subcategories__item" key={sub.id}>

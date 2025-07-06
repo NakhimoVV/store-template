@@ -13,7 +13,7 @@ const Categories = (props: CategoriesProps) => {
 
   return (
     <nav className="categories" aria-label="Категории товаров">
-      <h2 className="categories__title h4">Выберите категорию:</h2>
+      <header className="categories__title h4">Выберите категорию:</header>
       <ul className="categories__list">
         {categories.map((category) => (
           <li
