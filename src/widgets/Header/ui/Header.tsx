@@ -1,6 +1,8 @@
 'use client'
 
 import './Header.scss'
+import { useEffect } from 'react'
+import { useCategoryStore } from '@/entities/category/model/store'
 import SearchForm from '@/features/SearchForm'
 import { useFindHeightElement } from '@shared/hooks/useFindHeightElement'
 import Button from '@shared/ui/Button'
@@ -9,6 +11,7 @@ import ContactLinks from '@shared/ui/ContactLinks'
 import Logo from '@shared/ui/Logo'
 import NavigationMenu from '@shared/ui/NavigationMenu'
 import CatalogDropdown from '@widgets/CatalogDropdown'
+import type { Category } from '@/entities/category/model/types'
 import type { Contact, NavigationMenuItem } from '@shared/types'
 
 const contactLinks: Contact[] = [
@@ -30,8 +33,18 @@ const menuItems: NavigationMenuItem[] = [
   { href: '/wholesale', label: 'Оптовикам' },
 ]
 
-const Header = () => {
+type HeaderProps = {
+  categories: Category[]
+}
+
+const Header = (props: HeaderProps) => {
+  const { categories } = props
   const elementRef = useFindHeightElement('header')
+  const setCategories = useCategoryStore((state) => state.setCategories)
+
+  useEffect(() => {
+    setCategories(categories)
+  }, [categories, setCategories])
 
   return (
     <header className="header" ref={elementRef}>

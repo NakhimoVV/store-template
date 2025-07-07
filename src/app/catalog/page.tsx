@@ -1,17 +1,9 @@
-'use client'
-
-import { useEffect } from 'react'
-import { useCategoryStore } from '@/entities/category/model/store'
 import CategoryCard from '@/entities/category/ui/CategoryCard'
+import { fetchCategoriesSSR } from '@shared/api/fetchCategoriesSSR'
 import Grid from '@shared/ui/Grid'
 
-const CatalogPage = () => {
-  const fetchCategories = useCategoryStore((state) => state.fetchCategories)
-  const categories = useCategoryStore((state) => state.categories)
-
-  useEffect(() => {
-    void fetchCategories()
-  }, [fetchCategories])
+const CatalogPage = async () => {
+  const categories = await fetchCategoriesSSR()
 
   return (
     <section className="catalog-page container" aria-labelledby="catalog-page">
