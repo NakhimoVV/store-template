@@ -4,9 +4,9 @@ import clsx from 'clsx'
 import { nanoid } from 'nanoid'
 
 type GridProps = {
-  classNameForItem?: string
   columns: number
-  wideElement?: number
+  classNameForItem?: string
+  wideElement?: number // Назначение широкого элемента
   wide2?: boolean // Элемент занимает 2 колонки
   children: React.ReactNode
 }

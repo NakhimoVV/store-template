@@ -14,9 +14,15 @@ const CategoryCard = (props: CategoryCardProps) => {
   return (
     <div className="category-card">
       <header className="category-card__header">
-        <div className="category-card__image-wrapper">
-          {imgSrc && <Image src={imgSrc} alt="" width={200} height={200} />}
-        </div>
+        {imgSrc && (
+          <Image
+            className="category-card__image"
+            src={imgSrc}
+            alt=""
+            width={240}
+            height={200}
+          />
+        )}
         <h2 className="category-card__title h5">{title}</h2>
       </header>
       <Button

@@ -1,10 +1,20 @@
 .category-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
+  height: 100%;
   padding: 16px;
+  text-align: center;
   border: var(--border);
   border-radius: var(--border-radius-l);
   box-shadow: var(--shadow);
+
+  &__header {
+    display: grid;
+    justify-items: center;
+    row-gap: 10px;
+  }
+
 }

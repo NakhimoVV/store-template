@@ -3,7 +3,7 @@
 
   display: grid;
   grid-template-columns: repeat(var(--gridColumns), 1fr);
-  gap: fluid-to-laptop(20, 10);
+  gap: fluid-to-laptop(40, 10);
 
   &__item {
     &--wide {

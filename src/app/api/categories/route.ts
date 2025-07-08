@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { getRandomInt } from '@shared/lib/getRandomInt'
 
 const categories = [
   {
@@ -13,6 +14,7 @@ const categories = [
       { id: 'pu-self-leveling-floors', title: 'Полиуретановые наливные полы' },
       { id: 'colorants-additives', title: 'Колоранты, Добавки' },
     ],
+    image: `/mockImages/category/${getRandomInt(1, 5)}.png`,
   },
   {
     id: 'epoxy',
@@ -24,6 +26,7 @@ const categories = [
       { id: 'putties-repair', title: 'Шпаклёвки, Рем.составы' },
       { id: 'compounds-fillers', title: 'Компаунды, Составы для заливки' },
     ],
+    image: `/mockImages/category/${getRandomInt(1, 5)}.png`,
   },
   {
     id: 'anti-static',
@@ -37,6 +40,7 @@ const categories = [
       { id: 'pu-self-leveling-floors', title: 'Полиуретановые наливные полы' },
       { id: 'colorants-additives', title: 'Колоранты, Добавки' },
     ],
+    image: `/mockImages/category/${getRandomInt(1, 5)}.png`,
   },
   {
     id: 'uv-resistant',
@@ -48,6 +52,7 @@ const categories = [
       { id: 'putties-repair', title: 'Шпаклёвки, Рем.составы' },
       { id: 'compounds-fillers', title: 'Компаунды, Составы для заливки' },
     ],
+    image: `/mockImages/category/${getRandomInt(1, 5)}.png`,
   },
   {
     id: 'metal-coatings',
@@ -61,6 +66,7 @@ const categories = [
       { id: 'pu-self-leveling-floors', title: 'Полиуретановые наливные полы' },
       { id: 'colorants-additives', title: 'Колоранты, Добавки' },
     ],
+    image: `/mockImages/category/${getRandomInt(1, 5)}.png`,
   },
 ]
 

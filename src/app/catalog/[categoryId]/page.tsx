@@ -1,23 +1,18 @@
-'use client'
-
-import { useParams } from 'next/navigation'
-import { useEffect } from 'react'
-import { useProductStore } from '@/entities/product/model/store'
 import ProductCard from '@/entities/product/ui/ProductCard'
+import { fetchProductByCategoryIdSSR } from '@shared/api/fetchProductByCategoryIdSSR'
 import Grid from '@shared/ui/Grid'
 
-const CategoryPage = () => {
-  const { categoryId } = useParams() as { categoryId: string }
-  const fetchProducts = useProductStore((state) => state.fetchProducts)
-  const filteredProducts = useProductStore((state) => state.filteredProducts)
-  const setFilteredProducts = useProductStore(
-    (state) => state.setFilteredProducts,
-  )
+type ProductsByCategoryIdPageProps = {
+  params: {
+    categoryId: string
+  }
+}
 
-  useEffect(() => {
-    void setFilteredProducts(categoryId)
-    void fetchProducts()
-  }, [fetchProducts, categoryId, setFilteredProducts])
+export default async function ProductsByCategoryIdPage({
+  params,
+}: ProductsByCategoryIdPageProps) {
+  const { categoryId } = await params
+  const products = await fetchProductByCategoryIdSSR(categoryId)
 
   return (
     <section
@@ -29,7 +24,7 @@ const CategoryPage = () => {
       </h1>
       <div className="category-page__list">
         <Grid columns={4}>
-          {filteredProducts.map((product) => (
+          {products.map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}
         </Grid>
@@ -37,4 +32,3 @@ const CategoryPage = () => {
     </section>
   )
 }
-export default CategoryPage

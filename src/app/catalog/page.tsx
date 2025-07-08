@@ -1,8 +1,9 @@
+import './CatalogPage.scss'
 import CategoryCard from '@/entities/category/ui/CategoryCard'
 import { fetchCategoriesSSR } from '@shared/api/fetchCategoriesSSR'
 import Grid from '@shared/ui/Grid'
 
-const CatalogPage = async () => {
+export default async function CatalogPage() {
   const categories = await fetchCategoriesSSR()
 
   return (
@@ -16,6 +17,7 @@ const CatalogPage = async () => {
             <CategoryCard
               title={category.title}
               categoryId={category.id}
+              imgSrc={category.image}
               key={category.id}
             />
           ))}
@@ -24,5 +26,3 @@ const CatalogPage = async () => {
     </section>
   )
 }
-
-export default CatalogPage
