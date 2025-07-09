@@ -1,15 +1,21 @@
-.category-card {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  row-gap: 40px;
   height: 100%;
   padding: 16px;
   text-align: center;
   border: var(--border);
   border-radius: var(--border-radius-l);
   box-shadow: var(--shadow);
+  transition-duration: var(--transition-duration);
+
+  &--product {}
+
+  &--category {
+    align-items: center;
+  }
 
   &__header {
     display: grid;
@@ -17,4 +23,8 @@
     row-gap: 10px;
   }
 
+  @include hover {
+    border-color: var(--color-accent);
+    scale: 1.05;
+  }
 }

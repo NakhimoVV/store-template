@@ -1,8 +1,8 @@
 import './Logo.scss'
 import clsx from 'clsx'
 import Link from 'next/link'
-import LogoImage from '@shared/assets/images/logo.svg'
 import LogoImageWhite from '@shared/assets/images/logo-w.svg'
+import LogoImage from '@shared/assets/images/logo.svg'
 
 type LogoProps = {
   className: string

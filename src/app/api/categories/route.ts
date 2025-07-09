@@ -70,6 +70,14 @@ const categories = [
   },
 ]
 
-export async function GET() {
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url)
+  const categoryId = searchParams.get('categoryId')
+
+  if (categoryId) {
+    const foundCategory = categories.find((cat) => cat.id === categoryId)
+    return NextResponse.json(foundCategory)
+  }
+
   return NextResponse.json(categories)
 }
